@@ -23,6 +23,7 @@ jobs:
         - name: install dependecies
           run: npm install
         - name: publish npm
-          uses: npm publish
-          NODE_AUTH_TOKEN: ${{ secrets.github_token }}
+          run: npm publish
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.github_token }}
 
